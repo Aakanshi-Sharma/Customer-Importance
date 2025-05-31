@@ -1,0 +1,7 @@
+boto3
+pandas
+psycopg2
+SQLAlchemy
+pyarrow
+gdown
+python-dotenv
