@@ -59,3 +59,7 @@ def detect_patterns():
             output_path = f"detections/detection_{uuid.uuid4()}.parquet"
             pd.DataFrame(subset).to_parquet(f"/tmp/{output_path.split('/')[-1]}")
             boto3.client('s3').upload_file(f"/tmp/{output_path.split('/')[-1]}", S3_BUCKET, output_path)
+
+
+if __name__=="__main__":
+    detect_patterns()
